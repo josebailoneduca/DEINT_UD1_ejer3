@@ -7,14 +7,18 @@ Lista de paquetes:
 package ud1_ejer3;
 
 /**
- *
- * @author 2dam
+ * Pantalla principal de la aplicacion
+ * @author Jose Javier Bailon Ortiz
  */
 public class PantallaPrincipal extends javax.swing.JFrame {
 
     /*
      ATRIBUTOS
     */
+    
+    /**
+     * Ventana de confirmacion
+     */
     Confirmacion ventanaConfirmacion;
     
     /**
@@ -24,10 +28,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         initComponents();
     }
 
-    public void addCliente(Cliente c){
-    
-    }
-    
+  
     
     
     
@@ -102,10 +103,16 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Accion ejecutada al pulsar el boton sair
+     * @param evt  Evento recibido
+     */
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        //crea la ventana de confirmacion si aun no esta creada
         if (this.ventanaConfirmacion==null)
             this.ventanaConfirmacion = new Confirmacion(this, true);
          this.ventanaConfirmacion.setLocationRelativeTo(this);
+         //la pone visible
         this.ventanaConfirmacion.setVisible(true);
         
         
@@ -155,6 +162,10 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel lbTitulo;
     // End of variables declaration//GEN-END:variables
 
+    //FUNCIONES PROPIAS
+    /**
+     * Salir de la aplicacion
+     */
     void salir() {
         System.exit(0);
     }

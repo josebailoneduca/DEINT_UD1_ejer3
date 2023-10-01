@@ -7,14 +7,21 @@ Lista de paquetes:
 package ud1_ejer3;
 
 /**
- *
- * @author 2dam
+ * Ventana de confirmacion. Tiene dos botones. Uno para salir de la aplicacion
+ * y otro para volver a la pantalla principal
+ * @author Jose Javier Bailon Ortiz
  */
 public class Confirmacion extends javax.swing.JDialog {
 
-    PantallaPrincipal pPrin;
+    //ATRIBUTOS
     /**
-     * Creates new form Confirmacion
+     * Referencia a la pantalla principal
+     */
+    PantallaPrincipal pPrin;
+    
+    
+    /**
+     * Constructor
      */
     public Confirmacion(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
@@ -105,11 +112,20 @@ public class Confirmacion extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Accion ejecutada al pulsar el boton volver
+     * @param evt  Evento recibido
+     */
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
+        //ocultar la ventana
         this.setVisible(false);
     }//GEN-LAST:event_btnVolverActionPerformed
-
+    /**
+     * Accion ejecutada al pulsar el boton salir
+     * @param evt Evento recibido
+     */
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        //Ejecuta la funcion salir de la pantalla principal
         this.pPrin.salir();
     }//GEN-LAST:event_btnSalirActionPerformed
 
